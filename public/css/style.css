@@ -62,11 +62,23 @@
 }
 
 
+.icon_location{
+    position: relative;
+    width: 19px;
+    height: 15px;
+    left: 160px;
+    top: 17px;
+    background-image: url("../img/location.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
 .location{
     position: absolute;
     width: 172.99px;
     height: 19px;
-    left: 5px;
+    left: 0px;
     top: 15px;
 
     font-family: Barlow;
@@ -360,8 +372,20 @@
     top: 5px;
     background-size: contain;
     background-repeat: no-repeat;
-
 }
+
+
+
+.another_day_date,.another_day_temp_max_text,.another_day_temp_min_text{
+    font-family: Barlow;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #999999;
+    font-size: 8px;
+    line-height: 10px;
+}
+
 
 .another_day_date{
     position: absolute;
@@ -371,15 +395,12 @@
     left: 50%;
     top: 50px;
 
-    font-family: Barlow;
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: -0.05em;
-
     color: #444444;
-    text-align: center;
+    
 }
 
 .another_day_temp_max_text{
@@ -389,14 +410,7 @@
     left: 20px;
     top: 70px;
 
-    font-family: Barlow;
-    font-style: normal;
     font-weight: 300;
-    text-align: center;
-    font-size: 8px;
-    line-height: 10px;
-    letter-spacing: 0.1em;
-    color: #999999;
 }
 
 .another_day_temp_min_text{
@@ -406,15 +420,7 @@
     right: 25px;
     top: 70px;
 
-    font-family: Barlow;
-    font-style: normal;
     font-weight: 500;
-    font-size: 8px;
-    line-height: 10px;
-    
-    text-align: center;
-    letter-spacing: 0.1em;
-    color: #999999;
 }
 
 .another_day_vectorMax,.another_day_vectorMin{
@@ -429,7 +435,6 @@
 .another_day_vectorMax{
     left: 45px;
     background-image: url('../img/Vectormax.png');
-
 }
 
 .another_day_vectorMin{

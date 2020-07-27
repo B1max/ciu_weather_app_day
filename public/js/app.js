@@ -58,7 +58,7 @@ function fecha_calculada_corta(diasFuturos){
 
 
 async function resApiHoy () { 
-    await fetch("http://api.openweathermap.org/data/2.5/forecast?q=villa%20tesei,ar&cnt=1&appid=6ca77046e221612d6bc9fe0049aea0d3&units=metric")
+    await fetch("https://api.openweathermap.org/data/2.5/forecast?q=villa%20tesei,ar&cnt=1&appid=6ca77046e221612d6bc9fe0049aea0d3&units=metric")
     .then(res => {
         let resultado = res.json();
         return resultado;
@@ -211,14 +211,14 @@ function cargar_fondo(){
 
     let fondo = document.getElementById("graphic");
     if (difSunrise<dif || difSunset<dif){
-            fondo.style.backgroundImage = "url(../img/img-fondoSS.png)";
+            fondo.style.backgroundImage = "url(./img/img-fondoSS.png)";
     }else{
         if(minutosAhora>(sunsetMinutos+dif) && minutosAhora<(sunriseMinutos-dif)){
-            fondo.style.backgroundImage = "url(../img/img-fondoN.png)";
+            fondo.style.backgroundImage = "url(./img/img-fondoN.png)";
 
         }else{
             if(minutosAhora>(sunriseMinutos+30) && minutosAhora<(sunsetMinutos+dif)){
-                fondo.style.backgroundImage = "url(../img/img-fondo.png)";
+                fondo.style.backgroundImage = "url(./img/img-fondo.png)";
             }
         }
    }

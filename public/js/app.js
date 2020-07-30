@@ -93,6 +93,7 @@ async function resApiHoy () {
             miTiempo.sunset = formatoHorario(new Date(sunset * 1000));
             miTiempo.sunset_original = sunset;
             miTiempo.dt = String(day_time.getHours()) + "h " + String(day_time.getMinutes()) + "m";
+            miTiempo.ciudad = datas.name;
             lista_tiempos.push(miTiempo);
     })
     .catch(error=>{
@@ -175,6 +176,7 @@ function cargar_datos(){
             contentDiv("sunrise_data",lista_tiempos[0].sunrise);
             contentDiv("sunset_data",lista_tiempos[0].sunset);
             contentDiv("dayTime_data", lista_tiempos[0].dt);
+            // contentDiv("location",lista_tiempos[0].ciudad +", Buenos Aires");
         }else{
             cargarDiaExtra(i,lista_tiempos[i]);
         }

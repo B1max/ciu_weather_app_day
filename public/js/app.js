@@ -24,6 +24,7 @@ class tiempo {
     static sunrise_original;
     static sunset_original;
     static dt;
+    static ciudad;
 }
 
 
@@ -60,25 +61,25 @@ function fecha_calculada_corta(diasFuturos){
 
 
 async function resApiHoy () { 
-    await fetch("https://api.openweathermap.org/data/2.5/forecast?q=villa%20tesei,ar&cnt=1&appid=6ca77046e221612d6bc9fe0049aea0d3&units=metric")
+    await fetch("https://api.openweathermap.org/data/2.5/weather?lat=-34.5708&lon=-58.6243&appid=6ca77046e221612d6bc9fe0049aea0d3&units=metric&cnt=1")
     .then(res => {
         let resultado = res.json();
         return resultado;
     })
     .then(async (datas) => {
             let miTiempo = new tiempo();
-            let data = datas.list[0];
-            let estado = data.weather[0].main;
-            let icono_estado = "url(https://openweathermap.org/img/wn/"+data.weather[0].icon+"@2x.png)"
-            let temp = data.main.temp;
-            let temp_min = data.main.temp_min;
-            let temp_max = data.main.temp_max;
-            let humidity = data.main.humidity ;
-            let pressure = data.main.pressure ;
-            let wind_speed = String(data.wind.speed ) + " km/h";
-            let sunrise = datas.city.sunrise;
-            let sunset = datas.city.sunset;
-            let day_time = new Date(data.dt * 1000);
+            let estado = datas.weather[0].main;
+            let icono_estado = "url(https://openweathermap.org/img/wn/"+datas.weather[0].icon+"@2x.png)"
+            let temp = datas.main.temp;
+            let temp_min = datas.main.temp_min;
+            let temp_max = datas.main.temp_max;
+            let humidity = datas.main.humidity ;
+            let pressure = datas.main.pressure ;
+            let wind_speed = String(datas.wind.speed ) + " km/h";
+            let sunrise = datas.sys.sunrise;
+            let sunset = datas.sys.sunset;
+            let day_time = new Date(datas.dt * 1000);
+
             miTiempo.estado = estado;
             miTiempo.icono_estado = icono_estado;
             miTiempo.temp = temp;

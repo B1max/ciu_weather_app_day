@@ -1,443 +1,453 @@
-.body{
-    padding: 0px;
-}
-.container{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    max-width: 375px;
-    left: 0px;
-    height: 812px;
-    margin: 0px;
-    padding: 0px; 
-}
-
-
-.graphic{
-    position: relative;
-    left: 0px;
-    top: 0px;
-    width: auto;
-    height: 303px;
-    background-image: url('../img/img-fondo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0px ;
-}
-
-
-.panel{
-    position: absolute;
-    width: 100%;
-    height: 531px;
-    left: 0px;
-    top: 279px;
-    background: #FFFFFF;
-    border-radius: 30px 30px 0px 0px;
-    box-shadow: 0px -16px 40px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    padding: 0px;
-}
-
-
-.city{
-    position: absolute;
-    width: 186px;
-    height: 48px;
-    right: 0px;
-    margin-right: 0px;
-    top: 0px;
-    border-radius: 0px 30px 0px 30px;
-    background-color: 	rgba(13, 160, 234, 0.08);
-    padding: 0px;
-
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-
-    color: #0DA0EA;
-}
-
-
-.icon_location{
-    position: relative;
-    width: 19px;
-    height: 15px;
-    left: 160px;
-    top: 17px;
-    background-image: url("../img/location.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-
-.location{
-    position: absolute;
-    width: 172.99px;
-    height: 19px;
-    left: 0px;
-    top: 15px;
-
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #0DA0EA;
-}
-
-
-.date{
-    position: absolute;
-    width: 130px;
-    height: 34px;
-    left: 41px;
-    top: 15px;
-    margin-left: -65px;
-    left: 25%;
-
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-
-    color: #999999;
-}
-
-
-.today-row-01-main, .today-row-02, .today-row-03, .five-today-row-04{
-    position: absolute;
-    width: 282px;    
-    margin-left: -141px;
-    left: 50%;
-    height: 77px;
-}
-
-
-.today-row-01-main{
-    top: 72px;
-}
-
-
-.today-row-02{
-    top: 189PX;
-}
-
-
-.today-row-03{
-    top: 298px;
-}
-
-
-.temperature,.°c{
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 700;
-}
-
-
-.temperature{
-    position: absolute;
-    width: 62px;
-    height: 77px;
-    margin-left: -32px;
-    left: 50%;
-    top: 0px;
-    
-    font-weight: 300;
-    font-size: 64px;
-    line-height: 77px;
-    letter-spacing: -0.05em;
-    color: #000000;
-    text-align: right;
-}
-
-
-.°c{
-    position: absolute;
-    width: 24px;
-    height: 29px;
-    margin-left: 0px;
-    left: 60%;
-    top: 12px;
-
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    color: #666666;
-}
-
-
-.icono_estado{
-    position: absolute;
-    top: 0px;
-    width: 50px;
-    height: 50px;
-    margin-left: -25px;
-    left: 8%;
-    background-image: url("http://openweathermap.org/img/wn/10d@2x.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-
-.estado{
-    position: absolute;
-    top: 45px;
-    width: 50px;
-    height: 50px;
-    margin-left: -25px;
-    left: 8%;
-
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    letter-spacing: -0.05em;
-    color: #000000;
-}
-
-
-.main_temp_max, .main_temp_min{
-    position: absolute;
-    width: 32px;
-    height: 19px;
-    left: 225px;
-    top: 15px;
-    margin-left: -16px;
-    left: 90%;
-
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    color: #666666;
-}
-
-
-.main_temp_min{
-    top: 45px;
-}
-
-
-.vector_max, .vector_min{
-    position: absolute;
-    width: 5px;
-    height: 9px;
-    top:19px;
-    margin-left: -2.5px;
-    left: 96%;
-    background-image: url('../img/Vectormax.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-
-.vector_min{
-    top: 53px;
-    background-image: url('../img/Vectormin.png');
-}
-
-.icon_humidity, .humidity_data, .humidity_text,.icon_sunrise, .sunrise_data,
-.sunrise_text{
-    left: 8%;
-}
-
-
-.icon_pressure, .pressure_data ,.pressure_text,.icon_sunset,.sunset_data,.sunset_text{
-    left: 50%;
-}
-
-
-.icon_wind, .wind_data,.wind_text,.icon_dayTime,.dayTime_data,.dayTime_text{
-    left: 92%;
-}
-
-.humidity_data,.pressure_data,.wind_data,.sunrise_data,.sunset_data,.dayTime_data,
-.humidity_text,.pressure_text,.wind_text,.sunrise_text,.sunset_text,.dayTime_text{
-    position: absolute;
-    width: 75px;
-    height: 19px;
-    margin-left: -35px;
-
-
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 700;
-    text-align: center;
-}
-
-.humidity_data,.pressure_data,.wind_data,.sunrise_data,.sunset_data,.dayTime_data{
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.05em;
-    color: #444444;
-}
-
-.humidity_text,.pressure_text,.wind_text,.sunrise_text,.sunset_text,.dayTime_text{
-    font-size: 8px;
-    line-height: 10px;
-    letter-spacing: 0.1em;
-    color: #999999
-}
-
-.icon_humidity,.icon_wind,.icon_pressure,.icon_sunrise, .icon_sunset, .icon_dayTime{
-    position: absolute;
-    top: 5px;
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: -12.5px;
-}
-
-
-.humidity_data,.pressure_data,.wind_data,.sunrise_data,.sunset_data,.dayTime_data{
-    top: 35px;
-}
-
-
-.humidity_text, .pressure_text, .wind_text,.sunrise_text,.sunset_text,.dayTime_text{
-    top: 55px;
-}
-
-
-.icon_humidity{
-    background-image: url('../img/humidity.png');
-}
-
-
-.icon_pressure {
-    background-image: url('../img/pressure.png');
-}
-
-
-.icon_wind{
-    background-image: url('../img/wind.png');
-}
-
-
-.icon_sunrise{
-    background-image: url('../img/sunrise.png');
-}
-
-
-.icon_sunset{
-    background-image: url('../img/sunset.png');
-}
-
-
-.icon_dayTime{
-    background-image: url('../img/day_time.png');
-}
-
-
-.five-today-row-04{
-    overflow: scroll;
-    top: 391px;
-    height: 101px;
-    width: auto;
-    left: 19px;
-    right: 19px;
-    margin-left: 0px;
-}
-
-.another_day{
-    box-shadow: 30px 0px 30px 0px rgba(0, 0, 0, 0.048);
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 0px;
-    border-radius: 20px 20px 20px 20px;
-    background-color: white;
-}
-
-.another_day_icon{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    margin-left: -20px;
-    left: 50%;
-    top: 5px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-
-
-.another_day_date,.another_day_temp_max_text,.another_day_temp_min_text{
-    font-family: Barlow;
-    font-style: normal;
-    text-align: center;
-    letter-spacing: 0.1em;
-    color: #999999;
-    font-size: 8px;
-    line-height: 10px;
-}
-
-
-.another_day_date{
-    position: absolute;
-    height: 19px;
-    width: 100px;
-    margin-left: -50px;
-    left: 50%;
-    top: 50px;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.05em;
-    color: #444444;
-    
-}
-
-.another_day_temp_max_text{
-    position: absolute;
-    height: 19px;
-    width: 24px;
-    left: 20px;
-    top: 70px;
-
-    font-weight: 300;
-}
-
-.another_day_temp_min_text{
-    position: absolute;
-    height: 19px;
-    width: 24px;
-    right: 25px;
-    top: 70px;
-
-    font-weight: 500;
-}
-
-.another_day_vectorMax,.another_day_vectorMin{
-    position: absolute;
-    width: 5px;
-    height: 9px;
-    top: 70px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.another_day_vectorMax{
-    left: 45px;
-    background-image: url('../img/Vectormax.png');
-}
-
-.another_day_vectorMin{
-    right: 20px;
-    background-image: url('../img/Vectormin.png');
+    .body{
+        padding: 0px;
+    }
+    .container{
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        max-width: 375px;
+        left: 0px;
+        height: 812px;
+        margin: 0px;
+        padding: 0px; 
+    }
+
+
+    .graphic{
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: auto;
+        height: 303px;
+        background-image: url('../img/img-fondo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0px ;
+    }
+
+
+    .panel{
+        position: absolute;
+        width: 100%;
+        height: 531px;
+        left: 0px;
+        top: 279px;
+        background: #FFFFFF;
+        border-radius: 30px 30px 0px 0px;
+        box-shadow: 0px -16px 40px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        padding: 0px;
+    }
+
+
+    .city{
+        position: absolute;
+        width: 186px;
+        height: 48px;
+        right: 0px;
+        margin-right: 0px;
+        top: 0px;
+        border-radius: 0px 30px 0px 30px;
+        background-color: 	rgba(13, 160, 234, 0.08);
+        padding: 0px;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #0DA0EA;
+    }
+
+
+    .icon_location{
+        position: relative;
+        width: 19px;
+        height: 15px;
+        left: 160px;
+        top: 17px;
+        background-image: url("../img/location.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+    .location{
+        position: absolute;
+        width: 172.99px;
+        height: 19px;
+        left: 0px;
+        top: 15px;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #0DA0EA;
+    }
+
+
+    .date{
+        position: absolute;
+        width: 130px;
+        height: 34px;
+        left: 41px;
+        top: 15px;
+        margin-left: -65px;
+        left: 25%;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+
+        color: #999999;
+    }
+
+
+    .today-row-01-main, .today-row-02, .today-row-03, .five-today-row-04{
+        position: absolute;
+        width: 282px;    
+        margin-left: -141px;
+        left: 50%;
+        height: 77px;
+    }
+
+
+    .today-row-01-main{
+        top: 72px;
+    }
+
+
+    .today-row-02{
+        top: 189PX;
+    }
+
+
+    .today-row-03{
+        top: 298px;
+    }
+
+
+    .temperature,.°c{
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+
+    .temperature{
+        position: absolute;
+        width: 62px;
+        height: 77px;
+        margin-left: -32px;
+        left: 50%;
+        top: 0px;
+        
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 77px;
+        letter-spacing: -0.05em;
+        color: #000000;
+        text-align: right;
+    }
+
+
+    .°c{
+        position: absolute;
+        width: 24px;
+        height: 29px;
+        margin-left: 0px;
+        left: 62%;
+        top: 12px;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #666666;
+    }
+
+
+    .icono_estado{
+        position: absolute;
+        top: 0px;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        left: 8%;
+        background-image: url("https://openweathermap.org/img/wn/10d@2x.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+    .estado{
+        position: absolute;
+        top: 45px;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        left: 8%;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.05em;
+        color: #000000;
+    }
+
+
+    .main_temp_max, .main_temp_min{
+        position: absolute;
+        width: 32px;
+        height: 19px;
+        left: 225px;
+        top: 15px;
+        margin-left: -16px;
+        left: 90%;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #666666;
+    }
+
+
+    .main_temp_min{
+        top: 45px;
+    }
+
+
+    .vector_max, .vector_min{
+        position: absolute;
+        width: 5px;
+        height: 9px;
+        top:19px;
+        margin-left: -2.5px;
+        left: 96%;
+        background-image: url('../img/Vectormax.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+    .vector_min{
+        top: 53px;
+        background-image: url('../img/Vectormin.png');
+    }
+
+    .icon_humidity, .humidity_data, .humidity_text,.icon_sunrise, .sunrise_data,
+    .sunrise_text{
+        left: 8%;
+    }
+
+
+    .icon_pressure, .pressure_data ,.pressure_text,.icon_sunset,.sunset_data,.sunset_text{
+        left: 50%;
+    }
+
+
+    .icon_wind, .wind_data,.wind_text,.icon_dayTime,.dayTime_data,.dayTime_text{
+        left: 92%;
+    }
+
+    .humidity_data,.pressure_data,.wind_data,.sunrise_data,.sunset_data,.dayTime_data,
+    .humidity_text,.pressure_text,.wind_text,.sunrise_text,.sunset_text,.dayTime_text{
+        position: absolute;
+        width: 75px;
+        height: 19px;
+        margin-left: -35px;
+
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .humidity_data,.pressure_data,.wind_data,.sunrise_data,.sunset_data,.dayTime_data{
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -0.05em;
+        color: #444444;
+    }
+
+    .humidity_text,.pressure_text,.wind_text,.sunrise_text,.sunset_text,.dayTime_text{
+        font-size: 8px;
+        line-height: 10px;
+        letter-spacing: 0.1em;
+        color: #999999
+    }
+
+    .icon_humidity,.icon_wind,.icon_pressure,.icon_sunrise, .icon_sunset, .icon_dayTime{
+        position: absolute;
+        top: 5px;
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -12.5px;
+    }
+
+
+    .humidity_data,.pressure_data,.wind_data,.sunrise_data,.sunset_data,.dayTime_data{
+        top: 35px;
+    }
+
+
+    .humidity_text, .pressure_text, .wind_text,.sunrise_text,.sunset_text,.dayTime_text{
+        top: 55px;
+    }
+
+
+    .icon_humidity{
+        background-image: url('../img/humidity.png');
+    }
+
+
+    .icon_pressure {
+        background-image: url('../img/pressure.png');
+    }
+
+
+    .icon_wind{
+        background-image: url('../img/wind.png');
+    }
+
+
+    .icon_sunrise{
+        background-image: url('../img/sunrise.png');
+    }
+
+
+    .icon_sunset{
+        background-image: url('../img/sunset.png');
+    }
+
+
+    .icon_dayTime{
+        background-image: url('../img/day_time.png');
+    }
+
+
+    .five-today-row-04{
+        overflow: scroll;
+        top: 391px;
+        height: 101px;
+        width: auto;
+        left: 19px;
+        right: 19px;
+        margin-left: 0px;
+    }
+
+    .another_day{
+        box-shadow: 30px 0px 30px 0px rgba(0, 0, 0, 0.048);
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 0px;
+        border-radius: 20px 20px 20px 20px;
+        background-color: white;
+    }
+
+    .another_day_icon{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        margin-left: -20px;
+        left: 50%;
+        top: 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+
+    .another_day_date,.another_day_temp_max_text,.another_day_temp_min_text{
+        font-family: Barlow;
+        font-style: normal;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #999999;
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+
+    .another_day_date{
+        position: absolute;
+        height: 19px;
+        width: 100px;
+        margin-left: -50px;
+        left: 50%;
+        top: 50px;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -0.05em;
+        color: #444444;
+        
+    }
+
+    .another_day_temp_max_text{
+        position: absolute;
+        height: 19px;
+        width: 24px;
+        left: 20px;
+        top: 70px;
+
+        font-weight: 300;
+    }
+
+    .another_day_temp_min_text{
+        position: absolute;
+        height: 19px;
+        width: 24px;
+        right: 25px;
+        top: 70px;
+
+        font-weight: 500;
+    }
+
+    .another_day_vectorMax,.another_day_vectorMin{
+        position: absolute;
+        width: 5px;
+        height: 9px;
+        top: 70px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .another_day_vectorMax{
+        left: 45px;
+        background-image: url('../img/Vectormax.png');
+    }
+
+    .another_day_vectorMin{
+        right: 20px;
+        background-image: url('../img/Vectormin.png');
+    }
+
+
+
+@media all and (min-device-width: 376px){
+
+    .container{
+        max-width: 100%;
+    }
+
 }

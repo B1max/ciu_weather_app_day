@@ -1,4 +1,6 @@
 let lista_tiempos =[];
+
+
 window.addEventListener('load', async function(){
     await resApiHoy();
     await resApiFuturo();
@@ -67,7 +69,7 @@ async function resApiHoy () {
             let miTiempo = new tiempo();
             let data = datas.list[0];
             let estado = data.weather[0].main;
-            let icono_estado = "url(http://openweathermap.org/img/wn/"+data.weather[0].icon+"@2x.png)"
+            let icono_estado = "url(https://openweathermap.org/img/wn/"+data.weather[0].icon+"@2x.png)"
             let temp = data.main.temp;
             let temp_min = data.main.temp_min;
             let temp_max = data.main.temp_max;
@@ -109,11 +111,10 @@ async function resApiFuturo () {
         return resultado;
     })
     .then(async (datas) => {
-        console.log("dias traidos "+datas.daily.length);
             for(let i = 0; i < datas.daily.length;i++){
                 let miTiempo = new tiempo();
                 let data = datas.daily[i];
-                let icono_estado = "url(http://openweathermap.org/img/wn/"+data.weather[0].icon+"@2x.png)";
+                let icono_estado = "url(https://openweathermap.org/img/wn/"+data.weather[0].icon+"@2x.png)";
                 let temp = data.temp;
                 let temp_min = data.temp.min;
                 let temp_max = data.temp.max;
@@ -160,7 +161,6 @@ function contentDiv(id,contenido){
 
 function cargar_datos(){
     for(let i = 0;i<lista_tiempos.length;i++){
-        console.log("lista de->"+lista_tiempos.length);
         if(i==0){
             contentDiv("date",fecha_calculada(0));
             document.getElementById("icono_estado").style.backgroundImage = lista_tiempos[0].icono_estado;
@@ -210,16 +210,14 @@ function cargar_fondo(){
     let difSunset = Math.max(minutosAhora, sunsetMinutos) - Math.min(minutosAhora, sunsetMinutos);
 
     let fondo = document.getElementById("graphic");
-    if (difSunrise<dif || difSunset<dif){
-            fondo.style.backgroundImage = "url(./img/img-fondoSS.png)";
-    }else{
-        if(minutosAhora>(sunsetMinutos+dif) && minutosAhora<(sunriseMinutos-dif)){
-            fondo.style.backgroundImage = "url(./img/img-fondoN.png)";
 
-        }else{
-            if(minutosAhora>(sunriseMinutos+30) && minutosAhora<(sunsetMinutos+dif)){
-                fondo.style.backgroundImage = "url(./img/img-fondo.png)";
-            }
-        }
-   }
+    if (difSunrise<dif || difSunset<dif){
+        fondo.style.backgroundImage = "url(./img/img-fondoSS.png)";
+    }
+    if(minutosAhora>(sunsetMinutos+dif) || minutosAhora<(sunriseMinutos-dif)){
+        fondo.style.backgroundImage = "url(./img/img-fondoN.png)";
+    }
+    if(minutosAhora>(sunriseMinutos+30) && minutosAhora<(sunsetMinutos+dif)){
+        fondo.style.backgroundImage = "url(./img/img-fondo.png)";
+    }  
 }
